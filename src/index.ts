@@ -7,7 +7,7 @@ const recipe: LanguageRegistration[] = [
 		name: "recipe",
 		scopeName: "source.recipe",
 		displayName: "Recipe",
-		aliases: ["rx", "rcp"],
+		aliases: ["rx", "recipe"],
 	},
 ];
 
