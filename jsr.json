@@ -1,0 +1,14 @@
+{
+	"$schema": "https://jsr.io/schema/config-file.v1.json",
+	"name": "@kjanat/recipe-shiki",
+	"version": "0.1.0",
+	"license": "MIT",
+	"exports": "./src/index.ts",
+	"imports": {
+		"@shikijs/types": "npm:@shikijs/types@^3",
+		"recipe-tmlanguage": "jsr:@kjanat/recipe-tmlanguage@^0.1.0"
+	},
+	"publish": {
+		"include": ["src/**", "LICENSE", "README.md", "jsr.json"]
+	}
+}
