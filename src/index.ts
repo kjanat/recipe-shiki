@@ -1,7 +1,7 @@
 import type { LanguageRegistration } from "@shikijs/types";
 import grammar from "recipe-tmlanguage" with { type: "json" };
 
-const recipe = [
+const recipe: LanguageRegistration[] = [
 	{
 		...grammar,
 		name: "recipe",
@@ -9,6 +9,6 @@ const recipe = [
 		displayName: "Recipe",
 		aliases: ["rx", "rcp"],
 	},
-] satisfies LanguageRegistration[];
+];
 
 export default recipe;
