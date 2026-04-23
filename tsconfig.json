@@ -16,7 +16,8 @@
 		"checkJs": true,
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": true,
+		"types": ["bun"]
 	},
-	"include": ["src/**/*", "tsdown.config.ts"]
+	"include": ["src/**/*.ts", "demo/**/*.ts", "tsdown.config.ts"]
 }

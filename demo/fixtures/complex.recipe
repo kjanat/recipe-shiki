@@ -1,0 +1,35 @@
+/**
+ * Complex multi-drug prescription
+ * Exercises warnings, conditionals, IV routes, timing, and multiple R/ blocks
+ */
+
+# --- Antibiotic (IV, weight-based) ---
+R/ Gentamicine sol. inj. 5 mg/kg/dag
+   BLACKBOX
+Da/ disp. 5 ampullen
+S/ 1dd i.v. mane
+   sig. sec. art.
+   d.i.m.m.
+
+# --- Analgesic (PRN) ---
+R/ Paracetamol 1000 mg tablet
+   d.t.d. no 30
+D/ disp. 30 tablets
+S/ q.6h. p.r.n. bij pijn p.o.
+   non rep.
+
+# --- Inhaler ---
+R/ Salbutamol 100 mcg/pufje aeros.
+   LASA
+Da/ disp. 1 stuks
+S/ 1-2 pufjes q.4h. per inhalationem zo nodig
+   p.r.n.
+   rep. 3
+
+/* Paediatric suspension — weight-based, with compounding */
+R/ Amoxicilline          250 mg
+   Aqua purificata q.s.  ad 5 ml
+   m.f. susp.
+D/ disp. 100 ml
+S/ t.d.d. 5 ml p.o. p.c.
+   CITO
