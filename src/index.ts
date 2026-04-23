@@ -61,3 +61,4 @@ const recipe: LanguageRegistration[] = [{
 }];
 
 export default recipe;
+export { recipe };
