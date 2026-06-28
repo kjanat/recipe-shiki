@@ -1,6 +1,6 @@
 # recipe-shiki
 
-[Shiki][shiki] language pack for the [recipe] pharmacological notation
+[Shiki] language pack for the [recipe] pharmacological notation
 language. Thin wrapper around [`recipe-tmlanguage`][tmlang]'s generated
 TextMate grammar, shaped to match `@shikijs/langs/*` so it drops into any
 Shiki highlighter — including fine-grained bundles for tiny client payloads.
@@ -13,7 +13,7 @@ bun add -D recipe-shiki shiki
 npm i -D recipe-shiki shiki
 ```
 
-`shiki` is a peer dependency — bring your own version (`>=3`).
+`shiki` is a peer dependency — bring your own version (`>=4`).
 
 ## Usage
 
@@ -24,14 +24,14 @@ import { createHighlighterCore } from "shiki/core";
 import { createOnigurumaEngine } from "shiki/engine/oniguruma";
 
 const shiki = await createHighlighterCore({
-	themes: [import("@shikijs/themes/github-dark")],
-	langs: [import("recipe-shiki")],
-	engine: createOnigurumaEngine(import("shiki/wasm")),
+  themes: [import("@shikijs/themes/github-dark")],
+  langs: [import("recipe-shiki")],
+  engine: createOnigurumaEngine(import("shiki/wasm")),
 });
 
 const html = shiki.codeToHtml(source, {
-	lang: "recipe",
-	theme: "github-dark",
+  lang: "recipe",
+  theme: "github-dark",
 });
 ```
 
@@ -42,13 +42,13 @@ import recipe from "recipe-shiki";
 import { createHighlighter } from "shiki";
 
 const shiki = await createHighlighter({
-	themes: ["github-dark"],
-	langs: recipe,
+  themes: ["github-dark"],
+  langs: recipe,
 });
 
 const html = shiki.codeToHtml(source, {
-	lang: "recipe",
-	theme: "github-dark",
+  lang: "recipe",
+  theme: "github-dark",
 });
 ```
 
@@ -59,8 +59,8 @@ import recipe from "recipe-shiki";
 import { codeToHtml } from "shiki";
 
 const html = await codeToHtml(source, {
-	lang: recipe[0],
-	theme: "github-dark",
+  lang: recipe[0],
+  theme: "github-dark",
 });
 ```
 

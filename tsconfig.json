@@ -3,7 +3,7 @@
 		"target": "ESNext",
 		"module": "ESNext",
 		"moduleResolution": "bundler",
-		"allowImportingTsExtensions": false,
+		"allowImportingTsExtensions": true,
 		"lib": ["ESNext"],
 		"strict": true,
 		"noUncheckedIndexedAccess": true,
@@ -19,5 +19,6 @@
 		"verbatimModuleSyntax": true,
 		"types": ["bun"]
 	},
-	"include": ["src/**/*.ts", "demo/**/*.ts", "tsdown.config.ts"]
+	"include": ["src", "demo", "test", "tsdown.config.ts"],
+	"exclude": ["src/**/*.deno.ts"]
 }

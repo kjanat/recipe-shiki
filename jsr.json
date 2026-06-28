@@ -1,10 +1,11 @@
 {
 	"$schema": "https://jsr.io/schema/config-file.v1.json",
 	"name": "@kjanat/recipe-shiki",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"license": "MIT",
-	"exports": "./src/index.ts",
+	"exports": "./src/index.deno.ts",
 	"publish": {
-		"include": ["src/**", "LICENSE", "README.md", "jsr.json"]
+		"include": ["src/**", "LICENSE", "README.md", "jsr.json"],
+		"exclude": ["src/**/*.node.ts"]
 	}
 }
