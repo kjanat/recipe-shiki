@@ -1,7 +1,6 @@
 {
 	"useTabs": true,
 	"json": { "useTabs": true },
-	"markdown": { "textWrap": "maintain", "emphasisKind": "asterisks", "associations": ["!README.md"] },
 	"malva": {},
 	"markup": {
 		"associations": ["!**/*.svg"],
@@ -9,6 +8,7 @@
 		"ignoreFileCommentDirective": "dprint-ignore-file",
 	},
 	"yaml": { "printWidth": 160 },
+	"markdown": { "textWrap": "always", "associations": ["!README.md"] },
 	"prettier": { "associations": ["README.md"], "useTabs": false },
 	"excludes": ["**/*.lock", "**/node_modules", "**/dist", "**/target"],
 	"plugins": [

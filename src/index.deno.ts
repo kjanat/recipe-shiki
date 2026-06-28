@@ -9,7 +9,7 @@
  *
  * ## Basic usage with Shiki
  * ```ts
- * import { createHighlighter } from "shiki";
+ * import { createHighlighter } from "https://esm.sh/shiki@3.0.0";
  * import recipe from "jsr:@kjanat/recipe-shiki";
  *
  * const highlighter = await createHighlighter({

@@ -11,9 +11,11 @@ Shiki highlighter — including fine-grained bundles for tiny client payloads.
 bun add -D recipe-shiki shiki
 # or
 npm i -D recipe-shiki shiki
+# or, on Deno / from JSR
+deno add jsr:@kjanat/recipe-shiki npm:shiki
 ```
 
-`shiki` is a peer dependency — bring your own version (`>=4`).
+`shiki` is a peer dependency — bring your own version (`>=3`).
 
 ## Usage
 
@@ -64,23 +66,20 @@ const html = await codeToHtml(source, {
 });
 ```
 
-## Aliases
-
-The grammar registers under `recipe` (canonical) with aliases `rx` and
-`rcp`. Any of these work as the `lang` argument.
-
 ## Scopes
 
 All scopes end in `.recipe` and follow standard TextMate namespaces
 (`keyword.control.*`, `support.function.*`, `invalid.illegal.*`, …), so
 every mainstream Shiki theme paints recipe blocks without extra config.
-Full scope map: see [`recipe-tmlanguage`'s README][tmlang-scopes].
+Full scope map: see [`recipe-tmlanguage`][tmlang-scopes]'s README.
 
 ## Versioning
 
-Grammar content is inlined at build time from the version of
-`recipe-tmlanguage` listed in this package's `devDependencies`. Bumping the
-grammar means bumping this package.
+The grammar is **not** bundled in — `recipe-tmlanguage` is a runtime
+dependency. The npm build keeps a live `import … with { type: "json" }`
+against the `recipe-tmlanguage` npm package; the JSR build imports
+`jsr:@kjanat/recipe-tmlanguage`. Bumping the grammar means bumping the
+`recipe-tmlanguage` dependency (and this package).
 
 ## License
 

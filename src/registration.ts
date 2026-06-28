@@ -1,12 +1,13 @@
 import type { LanguageRegistration } from "@shikijs/types";
 
 /**
- * The raw recipe TextMate grammar, minus the Shiki-specific metadata that this
- * package supplies itself (`name`, `displayName`, `aliases`). Both entrypoints
- * import a value of this shape from `recipe-tmlanguage`; they differ only in how
- * the grammar is resolved (npm JSON module vs JSR `.ts` module).
+ * The raw recipe TextMate grammar, minus the Shiki metadata this package sets
+ * itself (`name`, `scopeName`, `displayName`) and `aliases`, which it drops —
+ * the language has a single identifier, `recipe`. Both entrypoints import a
+ * value of this shape from `recipe-tmlanguage`; they differ only in how the
+ * grammar is resolved (npm JSON module vs JSR `.ts` module).
  */
-export type RecipeGrammar = Omit<LanguageRegistration, "name" | "displayName" | "aliases">;
+export type RecipeGrammar = Omit<LanguageRegistration, "name" | "scopeName" | "displayName" | "aliases">;
 
 /**
  * Wrap the recipe TextMate grammar into a Shiki `LanguageRegistration` array.
