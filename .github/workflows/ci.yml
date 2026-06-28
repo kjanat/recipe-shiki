@@ -1,0 +1,18 @@
+name: CI
+on:
+  workflow_call: null
+  push: { branches: [master] }
+  pull_request: null
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile --ignore-scripts
+      - run: bun run typecheck # node graph: index.node.ts, registration, test
+      - run: bun run check
+      - run: bun run lint
+      - run: bun test
+      - run: bun run build # proves dist emits from the npm entry
+      - run: bunx jsr publish --dry-run # validates the jsr entry: resolution + slow-types
