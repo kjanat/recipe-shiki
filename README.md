@@ -1,5 +1,8 @@
 # recipe-shiki
 
+[![NPM](https://img.shields.io/npm/v/recipe-shiki?logo=npm&labelColor=CB3837&color=black)][npm]
+[![JSR](https://img.shields.io/jsr/v/@kjanat/recipe-shiki?logoColor=083344&logo=jsr&logoSize=auto&label=&labelColor=f7df1e&color=black)][jsr]
+
 [Shiki] language pack for the [recipe] pharmacological notation
 language. Thin wrapper around [`recipe-tmlanguage`][tmlang]'s generated
 TextMate grammar, shaped to match `@shikijs/langs/*` so it drops into any
@@ -90,5 +93,7 @@ against the `recipe-tmlanguage` npm package; the JSR build imports
 [tmlang]: https://github.com/kjanat/recipe-tmlanguage
 [tmlang-scopes]: https://github.com/kjanat/recipe-tmlanguage#scope-map
 [License]: LICENSE
+[jsr]: https://jsr.io/@kjanat/recipe-shiki
+[npm]: https://npm.im/recipe-shiki
 
 <!-- markdownlint-disable-file no-hard-tabs -->
