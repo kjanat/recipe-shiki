@@ -3,6 +3,7 @@ on:
   workflow_call: null
   push: { branches: [master] }
   pull_request: null
+permissions: { contents: read }
 jobs:
   check:
     runs-on: ubuntu-latest
